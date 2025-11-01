@@ -27,10 +27,9 @@ jobs:
       - name: Build onefile exe
         run: |
           pyinstaller --onefile --windowed --name Dvojkos main.py
-        working-directory: dvojkos-pygame
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Dvojkos-Windows
-          path: dvojkos-pygame/dist/Dvojkos.exe
+          path: dist/Dvojkos.exe
